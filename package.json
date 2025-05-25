@@ -2,6 +2,7 @@
   "name": "pack-n-go_2025",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://grassh0ppr.github.io/pack-n-go_2025",
   "type": "module",
   "scripts": {
     "dev": "vite",
