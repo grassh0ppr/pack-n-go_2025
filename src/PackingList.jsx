@@ -36,7 +36,7 @@ export default function PackingList({
         ))}
       </ul>
 
-      <div className="actions">
+      <div className="actions mx-auto">
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="input">Sort by input order</option>
           <option value="description">Sort by description</option>

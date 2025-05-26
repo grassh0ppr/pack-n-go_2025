@@ -34,3 +34,24 @@ li {
   align-items: center;
   justify-content: space-between;
 }
+
+.editable-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}

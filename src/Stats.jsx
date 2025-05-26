@@ -1,7 +1,7 @@
 export default function Stats({ items }) {
   if (!items.length)
     return (
-      <p className="stats">
+      <p className="stats text-center">
         <em>Start adding some items to your packing list 🚀</em>
       </p>
     );

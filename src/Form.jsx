@@ -23,7 +23,7 @@ export default function MyForm({ onAddItems }) {
 
   return (
     <Form className="add-form p-3 border rounded" onSubmit={handleSubmit}>
-      <h3 className="mb-3">What do you need for your trip?</h3>
+      <h3 className="mb-3"></h3>
       {/* <Form.Group className="mb-3" controlId="formBasicQuantity">
         <Form.Label>Quantity</Form.Label>
         <Form.Select
