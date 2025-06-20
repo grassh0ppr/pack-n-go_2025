@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import Logo from "./Logo";
 import MyForm from "./Form";
 import PackingList from "./PackingList";
 import Stats from "./Stats";
+import ThemeToggle from "./ThemeToggle";
 
-// import App.css
-import "../src/App.css";
-
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+// Create theme context
+export const ThemeContext = createContext();
 
 export default function App() {
   const [items, setItems] = useState([]);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
@@ -35,17 +38,24 @@ export default function App() {
     if (confirmed) setItems([]);
   }
 
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
   return (
-    <div className="app">
-      <Logo />
-      <MyForm onAddItems={handleAddItems} />
-      <PackingList
-        items={items}
-        onDeleteItem={handleDeleteItem}
-        onToggleItem={handleToggleItem}
-        onClearList={handleClearList}
-      />
-      <Stats items={items} />
-    </div>
+    <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+      <div className={`app ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
+        <ThemeToggle />
+        <Logo />
+        <MyForm onAddItems={handleAddItems} />
+        <PackingList
+          items={items}
+          onDeleteItem={handleDeleteItem}
+          onToggleItem={handleToggleItem}
+          onClearList={handleClearList}
+        />
+        <Stats items={items} />
+      </div>
+    </ThemeContext.Provider>
   );
 }

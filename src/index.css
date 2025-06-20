@@ -3,15 +3,19 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button.delete {
   background: none;
   border: none;
+  color: inherit;
 }
 
 .delete img {
   width: 1rem;
+  filter: invert(0);
+  transition: filter 0.3s ease;
 }
 
 .add-form {
@@ -19,6 +23,8 @@ button.delete {
   margin: 20px auto;
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 ul {
@@ -33,6 +39,8 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .editable-title {
@@ -46,6 +54,8 @@ li {
   text-align: center;
   margin: 0 auto;
   display: block;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .actions {
@@ -54,4 +64,15 @@ li {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+}
+
+/* Dark theme overrides for body */
+.dark-theme body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Dark theme for delete button icon */
+.dark-theme .delete img {
+  filter: invert(1);
 }
