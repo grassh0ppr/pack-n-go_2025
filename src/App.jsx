@@ -4,6 +4,9 @@ import MyForm from "./Form";
 import PackingList from "./PackingList";
 import Stats from "./Stats";
 
+// import App.css
+import "../src/App.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {

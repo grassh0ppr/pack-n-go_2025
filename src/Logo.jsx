@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Logo() {
-  const [title, setTitle] = useState("🛩 pack-n-go ✈");
+  const [title, setTitle] = useState("pack-n-go");
   const [isEditing, setIsEditing] = useState(false);
 
   function handleTitleChange(e) {
