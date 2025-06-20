@@ -5,6 +5,7 @@ export default function PackingList({
   items,
   onDeleteItem,
   onToggleItem,
+  onEditItem,
   onClearList,
 }) {
   const [sortBy, setSortBy] = useState("input");
@@ -31,6 +32,7 @@ export default function PackingList({
             item={item}
             onDeleteItem={onDeleteItem}
             onToggleItem={onToggleItem}
+            onEditItem={onEditItem}
             key={item.id}
           />
         ))}

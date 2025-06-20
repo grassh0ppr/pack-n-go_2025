@@ -26,6 +26,59 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Edit button styles */
+.edit {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.edit:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.edit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Checkmark icon styles when editing */
+.edit svg {
+  transition: all 0.2s ease;
+}
+
+.edit:hover svg {
+  stroke: #28a745;
+}
+
+/* Edit input styles */
+.edit-input {
+  flex-grow: 1;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: inherit;
+  background-color: inherit;
+  color: inherit;
+  outline: none;
+}
+
+.edit-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Item text styles */
+.item-text {
+  flex-grow: 1;
+  word-break: break-word;
+}
+
 /* Dark theme styles */
 .dark-theme {
   background-color: #1a1a1a;
@@ -72,6 +125,25 @@
   background-color: #3d3d3d;
 }
 
+.dark-theme .edit:hover {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+.dark-theme .edit:hover svg {
+  stroke: #28a745;
+}
+
+.dark-theme .edit-input {
+  background-color: #3d3d3d;
+  border-color: #007bff;
+  color: #ffffff;
+}
+
+.dark-theme .edit-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
 /* Light theme styles */
 .light-theme {
   background-color: #f8f9fa;
@@ -87,4 +159,10 @@
 
 .light-theme .theme-toggle:hover {
   background-color: #f8f9fa;
+}
+
+.light-theme .edit-input {
+  background-color: #ffffff;
+  border-color: #007bff;
+  color: #333;
 }
